@@ -151,12 +151,12 @@ object ClassRef {
 
 trait CoverageMetrics {
   def statements: Iterable[Statement]
-  def statementCount: Int = statements.size
+  def statementCount: Int = statements.filterNot(_.branch).size
 
   def ignoredStatements: Iterable[Statement]
   def ignoredStatementCount: Int = ignoredStatements.size
 
-  def invokedStatements: Iterable[Statement] = statements.filter(_.count > 0)
+  def invokedStatements: Iterable[Statement] = statements.filter(_.count > 0).filterNot(_.branch) // Filter branch statements that should not be counted twice.
   def invokedStatementCount = invokedStatements.size
   def statementCoverage: Double = if (statementCount == 0) 1 else invokedStatementCount / statementCount.toDouble
   def statementCoveragePercent = statementCoverage * 100
