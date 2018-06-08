@@ -2,7 +2,7 @@
 
 Tools used for my semester project about code coverage for Dotty.
 
-**Warning** : the following only work with the modified version of the dotty compiler !
+**Warning** : the following only works with the modified version of the dotty compiler !
 
 To run:
 
@@ -10,12 +10,12 @@ To run:
 ;codeTest/run;codeTest/clean;Report/run
 ```
 
-The repository contains two main project:
+The repository contains two main projects:
 
 
 ## CodeTest
 
-[Simple dotty project](https://github.com/lampepfl/dotty-example-project) adapted to be used with the current experimental version of the dotty compiler who implement the code coverage, with a sample code to test the coverage.
+[Simple dotty project](https://github.com/lampepfl/dotty-example-project) adapted to be used with the current experimental version of the dotty compiler who implements the code coverage, with a sample code to test the coverage.
 
 ## Report
 
